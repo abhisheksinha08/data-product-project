@@ -11,7 +11,14 @@ library(shiny)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-   
+  
+        output$Documentation <- renderText({
+                "<h3>Documentation</h3>
+1. Enter Height and Select Unit from the Drop Down List. 
+                <br/> 2. Enter Weight and select unit from drop down list. 
+                <br/>3. System will calculate the BMI.<hr/><br/><h3>Results</h3>"
+        })
+        
   output$ReturnValue <- renderText({
       height <- input$height
       if(input$heightType=='in')
@@ -45,7 +52,7 @@ shinyServer(function(input, output) {
           bmiMessage <- "You are Obese."
       }
       
-      paste0("BMI: ",bmi,".", bmiMessage)
+      paste0("<ul><li><b>BMI: </b>",bmi,".</li><li>", bmiMessage,"</li></ul>")
       
   })
 })
