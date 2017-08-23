@@ -3,8 +3,8 @@ title: bmi_app
 account: abhisheksinha
 server: shinyapps.io
 appId: 206883
-bundleId: 950796
+bundleId: 950800
 url: https://abhisheksinha.shinyapps.io/bmi_app/
-when: 1503476954.5672
+when: 1503477155.53201
 asMultiple: FALSE
 asStatic: FALSE
